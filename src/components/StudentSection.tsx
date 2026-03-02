@@ -22,7 +22,7 @@ export default function StudentSection() {
   }
 
   return (
-    <section id="students" className="bg-sky-50 py-20 lg:py-28">
+    <section id="students" className="bg-gradient-to-b from-white via-sky-50/60 to-sky-50 py-20 lg:py-28">
       <div className="mx-auto flex max-w-7xl flex-col items-center gap-14 px-6 lg:flex-row lg:gap-20">
         {/* Illustration */}
         <div className="flex flex-1 justify-center">
