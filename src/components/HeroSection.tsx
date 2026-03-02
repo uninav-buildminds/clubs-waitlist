@@ -1,9 +1,8 @@
 import {
-  appMockup,
+  appMockup2,
   chipTech,
   chipCreative,
   chipSports,
-  chipFaith,
   chipDance,
 } from '../assets'
 import Orb from './Orb'
@@ -11,33 +10,6 @@ import Orb from './Orb'
 export default function HeroSection() {
   return (
     <section id="hero" className="relative overflow-hidden bg-white">
-      {/* ── Orb background – pushed down, masked on all edges ── */}
-      <div
-        className="absolute top-[30%] right-0 bottom-0 left-0"
-        style={{
-          maskImage:
-            'linear-gradient(to bottom, transparent 0%, black 25%, black 60%, transparent 100%), linear-gradient(to right, transparent 0%, black 15%, black 85%, transparent 100%)',
-          maskComposite: 'intersect',
-          WebkitMaskImage:
-            'linear-gradient(to bottom, transparent 0%, black 25%, black 60%, transparent 100%), linear-gradient(to right, transparent 0%, black 15%, black 85%, transparent 100%)',
-          WebkitMaskComposite: 'source-in',
-        }}
-      >
-        <Orb
-          hue={220}
-          hoverIntensity={0.3}
-          rotateOnHover
-          forceHoverState={false}
-          backgroundColor="#ffffff"
-        />
-      </div>
-
-      {/* Top fade – ensures headline area stays pure white */}
-      <div className="pointer-events-none absolute top-[25%] right-0 left-0 z-[5] h-48 bg-gradient-to-b from-white via-white/70 to-transparent" />
-
-      {/* Bottom fade – blends orb into next section */}
-      <div className="pointer-events-none absolute right-0 bottom-0 left-0 z-[5] h-48 bg-gradient-to-t from-white via-white/80 to-transparent" />
-
       {/* ── Content layer ── */}
       <div className="relative z-10 mx-auto flex max-w-7xl flex-col items-center justify-center px-4 py-16 sm:px-6 sm:py-20">
         {/* Headline area */}
@@ -52,9 +24,20 @@ export default function HeroSection() {
           </p>
         </div>
 
-        {/* ── Phone + chips visual ── */}
-        <div className="relative flex items-center justify-center">
-          {/* Floating chips — percentage-positioned so they scale with the mockup */}
+        {/* ── Orb + Phone + chips visual ── */}
+        <div className="relative flex aspect-square w-[85vw] max-w-[360px] items-center justify-center sm:max-w-[420px] lg:max-w-[500px]">
+          {/* Orb rendered inline behind the mockup */}
+          <div className="absolute inset-0 overflow-hidden rounded-full">
+            <Orb
+              hue={220}
+              hoverIntensity={0.3}
+              rotateOnHover
+              forceHoverState={false}
+              backgroundColor="#ffffff"
+            />
+          </div>
+
+          {/* Floating chips — percentage-positioned so they scale with the orb */}
           <img
             src={chipTech}
             alt="Tech clubs"
@@ -83,30 +66,28 @@ export default function HeroSection() {
             }}
           />
           <img
-            src={chipFaith}
-            alt="Faith & service clubs"
+            src={chipDance}
+            alt="Dance clubs"
             className="chip-scatter-br absolute z-20 w-[20%] opacity-0 [animation-delay:0.6s]"
             style={{ top: '50%', right: '-12%' }}
             onAnimationEnd={(e) => {
               e.currentTarget.classList.add('animate-float-medium')
             }}
           />
-          <img
-            src={chipDance}
-            alt="Dance clubs"
-            className="chip-scatter-b absolute z-20 w-[20%] opacity-0 [animation-delay:0.9s]"
-            style={{ bottom: '-4%', left: '50%', transform: 'translateX(-50%)' }}
-            onAnimationEnd={(e) => {
-              e.currentTarget.classList.add('animate-float-slow')
+          {/* App mockup with bottom fade, sitting inside the orb */}
+          <div
+            className="animate-fade-up relative z-10 w-[60%] opacity-0"
+            style={{
+              maskImage: 'linear-gradient(to bottom, black 65%, transparent 95%)',
+              WebkitMaskImage: 'linear-gradient(to bottom, black 65%, transparent 95%)',
             }}
-          />
-
-          {/* App mockup */}
-          <img
-            src={appMockup}
-            alt="UniNav Club Discovery interface"
-            className="animate-fade-up relative z-10 h-auto w-[90vw] max-w-[500px] opacity-0 drop-shadow-2xl sm:max-w-[600px] lg:max-w-[750px]"
-          />
+          >
+            <img
+              src={appMockup2}
+              alt="UniNav Club Discovery interface"
+              className="h-auto w-full drop-shadow-2xl"
+            />
+          </div>
         </div>
 
         {/* Scroll hint / CTA */}
