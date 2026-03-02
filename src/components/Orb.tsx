@@ -152,19 +152,16 @@ export default function Orb({
       float v3 = smoothstep(innerRadius, mix(innerRadius, 1.0, 0.5), len);
 
       vec3 colBase = mix(color1, color2, cl);
-      float fadeAmount = mix(1.0, 0.1, bgLuminance);
 
-      vec3 darkCol = mix(color3, colBase, v0);
-      darkCol = (darkCol + v1) * v2 * v3;
-      darkCol = clamp(darkCol, 0.0, 1.0);
+      // Light-background path: keep everything bright & pastel
+      vec3 col = mix(color3, colBase, v0);
+      col = (col + v1) * mix(1.0, v2 * v3, 0.5);
+      col = mix(backgroundColor, col, v0 * 0.85 + 0.15);
+      // Lift floor so nothing goes dark
+      col = max(col, backgroundColor * 0.7);
+      col = clamp(col, 0.0, 1.0);
 
-      vec3 lightCol = (colBase + v1) * mix(1.0, v2 * v3, fadeAmount);
-      lightCol = mix(backgroundColor, lightCol, v0);
-      lightCol = clamp(lightCol, 0.0, 1.0);
-
-      vec3 finalCol = mix(darkCol, lightCol, bgLuminance);
-
-      return extractAlpha(finalCol);
+      return extractAlpha(col);
     }
 
     vec4 mainImage(vec2 fragCoord) {

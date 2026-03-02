@@ -1,4 +1,5 @@
 import {
+  appMockup,
   chipTech,
   chipCreative,
   chipSports,
@@ -79,16 +80,12 @@ export default function HeroSection() {
             }}
           />
 
-          {/* Phone mockup placeholder — replace with <img src={heroPhone} /> */}
-          <div className="animate-fade-up relative z-10 flex h-[380px] w-[190px] items-center justify-center rounded-[2.5rem] border border-gray-200 bg-white shadow-2xl shadow-royal/10 opacity-0 sm:h-[460px] sm:w-[230px] lg:h-[540px] lg:w-[270px]">
-            <div className="flex h-[350px] w-[170px] items-center justify-center rounded-[2rem] bg-gradient-to-br from-sky-50 to-white sm:h-[428px] sm:w-[208px] lg:h-[504px] lg:w-[246px]">
-              <span className="px-4 text-center text-xs text-gray-400">
-                Phone mockup
-                <br />
-                (add hero-phone.png)
-              </span>
-            </div>
-          </div>
+          {/* App mockup */}
+          <img
+            src={appMockup}
+            alt="UniNav Club Discovery interface"
+            className="animate-fade-up relative z-10 h-[380px] w-auto opacity-0 drop-shadow-2xl sm:h-[460px] lg:h-[540px]"
+          />
         </div>
 
         {/* Scroll hint / CTA */}
