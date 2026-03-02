@@ -36,7 +36,7 @@ export default function StudentSection() {
         {/* Content */}
         <div className="flex-1">
           <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-            For students who want more than lectures
+            For students looking for a circle
           </h2>
 
           <p className="mt-4 max-w-lg text-lg leading-relaxed text-gray-600">
