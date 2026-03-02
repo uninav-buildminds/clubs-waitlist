@@ -10,7 +10,7 @@ import Orb from './Orb'
 
 export default function HeroSection() {
   return (
-    <section id="hero" className="relative min-h-screen overflow-hidden bg-white">
+    <section id="hero" className="relative overflow-hidden bg-white">
       {/* ── Orb background – pushed down, masked on all edges ── */}
       <div
         className="absolute top-[30%] right-0 bottom-0 left-0"
@@ -39,7 +39,7 @@ export default function HeroSection() {
       <div className="pointer-events-none absolute right-0 bottom-0 left-0 z-[5] h-48 bg-gradient-to-t from-white via-white/80 to-transparent" />
 
       {/* ── Content layer ── */}
-      <div className="relative z-10 mx-auto flex min-h-screen max-w-7xl flex-col items-center justify-center px-4 py-16 sm:px-6 sm:py-20">
+      <div className="relative z-10 mx-auto flex max-w-7xl flex-col items-center justify-center px-4 py-16 sm:px-6 sm:py-20">
         {/* Headline area */}
         <div className="animate-fade-in-down mb-8 text-center sm:mb-12 lg:mb-16">
           <h1 className="text-3xl leading-tight font-extrabold tracking-tight text-gray-900 drop-shadow-[0_1px_2px_rgba(255,255,255,0.8)] sm:text-5xl lg:text-7xl">
@@ -105,7 +105,7 @@ export default function HeroSection() {
           <img
             src={appMockup}
             alt="UniNav Club Discovery interface"
-            className="animate-fade-up relative z-10 h-auto w-[85vw] max-w-[380px] opacity-0 drop-shadow-2xl sm:w-auto sm:max-w-none sm:h-[55vh] sm:max-h-[500px] lg:h-[65vh] lg:max-h-[620px]"
+            className="animate-fade-up relative z-10 h-auto w-[90vw] max-w-[500px] opacity-0 drop-shadow-2xl sm:max-w-[600px] lg:max-w-[750px]"
           />
         </div>
 
