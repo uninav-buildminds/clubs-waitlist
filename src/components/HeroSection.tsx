@@ -15,8 +15,8 @@ export default function HeroSection() {
         {/* Headline area */}
         <div className="animate-fade-in-down mb-8 text-center sm:mb-12 lg:mb-16">
           <h1 className="text-3xl leading-tight font-extrabold tracking-tight text-gray-900 drop-shadow-[0_1px_2px_rgba(255,255,255,0.8)] sm:text-5xl lg:text-7xl">
-            Find your next{' '}
-            <span className="text-royal">campus crew</span>
+            Find your{' '}
+            <span className="text-royal">people</span>
           </h1>
           <p className="mx-auto mt-4 max-w-2xl text-base leading-relaxed font-medium text-gray-700 drop-shadow-[0_1px_1px_rgba(255,255,255,0.9)] sm:mt-5 sm:text-xl">
             UniNav Club Discovery helps you discover clubs, communities, and
