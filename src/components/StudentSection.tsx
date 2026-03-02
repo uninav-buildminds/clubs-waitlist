@@ -24,12 +24,12 @@ export default function StudentSection() {
   return (
     <section id="students" className="bg-gradient-to-b from-white via-sky-50/60 to-sky-50 py-20 lg:py-28">
       <div className="mx-auto flex max-w-7xl flex-col items-center gap-14 px-6 lg:flex-row lg:gap-20">
-        {/* Illustration */}
-        <div className="flex flex-1 justify-center">
+        {/* Illustration – hidden on mobile */}
+        <div className="hidden flex-1 items-center justify-center lg:flex">
           <img
             src={illustStudent}
             alt="Student discovering clubs"
-            className="w-64 drop-shadow-lg sm:w-80 lg:w-96"
+            className="h-auto w-full max-w-lg drop-shadow-lg xl:max-w-2xl"
           />
         </div>
 

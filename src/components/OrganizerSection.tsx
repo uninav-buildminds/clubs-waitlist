@@ -90,11 +90,11 @@ export default function OrganizerSection() {
         </div>
 
         {/* Illustration */}
-        <div className="flex flex-1 justify-center">
+        <div className="hidden flex-1 items-center justify-center lg:flex">
           <img
             src={illustOrganizer}
             alt="Club organizer managing members"
-            className="w-64 drop-shadow-lg sm:w-80 lg:w-96"
+            className="h-auto w-full max-w-lg drop-shadow-lg xl:max-w-2xl"
           />
         </div>
       </div>
