@@ -105,7 +105,7 @@ export default function HeroSection() {
           <img
             src={appMockup}
             alt="UniNav Club Discovery interface"
-            className="animate-fade-up relative z-10 h-auto w-[70vw] max-w-[300px] opacity-0 drop-shadow-2xl sm:w-auto sm:max-w-none sm:h-[55vh] sm:max-h-[500px] lg:h-[65vh] lg:max-h-[620px]"
+            className="animate-fade-up relative z-10 h-auto w-[85vw] max-w-[380px] opacity-0 drop-shadow-2xl sm:w-auto sm:max-w-none sm:h-[55vh] sm:max-h-[500px] lg:h-[65vh] lg:max-h-[620px]"
           />
         </div>
 
