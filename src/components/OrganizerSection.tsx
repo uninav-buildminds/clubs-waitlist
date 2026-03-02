@@ -40,7 +40,6 @@ export default function OrganizerSection() {
             {[
               'Create a rich profile for your club and events',
               'Reach students by interest, not just by broadcast',
-              'Get early access to tools for managing sign-ups',
             ].map((item) => (
               <li key={item} className="flex items-start gap-2">
                 <span className="mt-1">&#10003;</span>
