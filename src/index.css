@@ -1,0 +1,47 @@
+@import "tailwindcss";
+
+/*
+ * Brand palette
+ * --royal:  #1246ff (primary blue)
+ * --sky:    #e6f0ff (light background)
+ * --sky-50: #f0f6ff (very light)
+ */
+
+@theme {
+  --color-royal: #1246ff;
+  --color-royal-dark: #0d38cc;
+  --color-royal-light: #3d6aff;
+  --color-sky: #e6f0ff;
+  --color-sky-50: #f0f6ff;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    font-family: 'Inter', ui-sans-serif, system-ui, -apple-system, sans-serif;
+  }
+}
+
+/* Floating chip animations */
+@keyframes float-slow {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-8px); }
+}
+@keyframes float-medium {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-6px); }
+}
+@keyframes float-fast {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+.animate-float-slow {
+  animation: float-slow 4s ease-in-out infinite;
+}
+.animate-float-medium {
+  animation: float-medium 3s ease-in-out infinite;
+}
+.animate-float-fast {
+  animation: float-fast 3.5s ease-in-out infinite;
+}
